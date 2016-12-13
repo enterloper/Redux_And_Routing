@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchPosts } from '../actions/index'
 
 class PostsIndex extends Component {
 	componentWillMount() {
-		console.log('time for an action creator')
+		this.props.fetchPosts()
 	}
+
 	render() {
 		return (
 			<div>
@@ -13,4 +16,4 @@ class PostsIndex extends Component {
 	}
 }
 
-export default PostsIndex;
+export default connect(null, { fetchPosts })(PostsIndex);
