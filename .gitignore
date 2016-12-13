@@ -36,5 +36,5 @@ dist
 web/dist
 
 # IDEA/Webstorm project files
-.idea
+.idea/*
 *.iml
